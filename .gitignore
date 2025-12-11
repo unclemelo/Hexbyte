@@ -2,3 +2,4 @@ bugtrack
 .env
 cogs/__pycache__
 __pycache__
+bot_errors.log
