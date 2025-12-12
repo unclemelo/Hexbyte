@@ -1,12 +1,16 @@
 import discord
+import os
 from discord.ext import commands
 from discord import app_commands
+from dotenv import load_dotenv
 import aiohttp
 import traceback
 import json
 
-API_URL = "https://wtf-server-rose.vercel.app/wtf/playerStats?steamID={}"
-
+load_dotenv()
+API_LINK = os.getenv("API_LINK")
+API_STAT= "playerStats?steamID={}"
+API_URL = API_STAT + API_STAT
 
 class PlayerStats(commands.Cog):
     def __init__(self, bot):
