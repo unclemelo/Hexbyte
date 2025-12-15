@@ -1,3 +1,4 @@
+import traceback
 import discord
 import os
 import asyncio
@@ -26,23 +27,37 @@ def log(message: str):
 # Events
 @client.event
 async def on_ready():
-    log(f"Buggy online as {client.user} ({client.user.id})")
-    log(f"Connected to {len(client.guilds)} guilds.")
+    user = client.user
+    if not user:
+        return
 
-    # Set streaming presence
-    await client.change_presence(
-        activity=discord.Streaming(
-            name="🐛 | Tracking Bugs on WTF",
-            url="https://www.youtube.com/@WaifuTacticalForce"
+    log(f"🐛 Buggy online as {user} ({user.id})")
+    log(f"Connected to {len(client.guilds)} guilds")
+
+    try:
+        await client.change_presence(
+            status=discord.Status.idle,
+            activity=discord.Activity(
+                type=discord.ActivityType.playing,
+                name="🌸 WTF: Waifu Tactical Force",
+                state="🐛 Tracking Bugs & Reading Data 💻"
+            )
         )
-    )
+        log("Custom status set successfully")
+
+    except Exception:
+        log("Failed to set custom status")
+        traceback.print_exc()
 
     # Sync slash commands
     try:
         synced = await client.tree.sync()
         log(f"Slash commands synced: {len(synced)}")
-    except Exception as e:
-        log(f"Slash command sync failed: {e}")
+    except Exception:
+        log("Slash command sync failed")
+        traceback.print_exc()
+
+
 
 # ──────────────────────────────────────────────
 # Cog loader

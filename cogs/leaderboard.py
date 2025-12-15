@@ -1,4 +1,3 @@
-# wtfleaderboard_test_cog.py
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -49,9 +48,9 @@ class LeaderboardTest(commands.Cog):
 
             # Build embed
             embed = discord.Embed(
-                title="🏆 WTF Leaderboard (Test)",
+                title="WTF Leaderboard (Test)",
                 description="Top players (mock data).",
-                color=discord.Color.gold()
+                color=discord.Color(0x8fb5f0)
             )
             embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1448886491416629349/1448887023803961447/wtf-waifu-tactical-force.png?ex=693ce4b1&is=693b9331&hm=99784c82217f0fc1ad21b710f9d6f7c5570d5e97a234485e255ca7e35c792e7f&")
 
@@ -62,11 +61,11 @@ class LeaderboardTest(commands.Cog):
 
                 # Use special emojis for top 3
                 if idx == 1:
-                    rank_display = "<:letterw:1448887703138734141>"
+                    rank_display = "<:letterw:1448898982725025812>"
                 elif idx == 2:
-                    rank_display = "<:lettert:1448887766938030172>"
+                    rank_display = "<:lettert:1448898946951942175>"
                 elif idx == 3:
-                    rank_display = "<:letterf:1448887792645177506>"
+                    rank_display = "<:letterf:1448898880665161728>"
                 else:
                     rank_display = str(idx)
 

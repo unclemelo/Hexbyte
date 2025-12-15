@@ -1,4 +1,3 @@
-# wtfstats_cog.py
 import discord
 import os
 import io
