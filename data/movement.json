@@ -1,0 +1,17 @@
+{
+    "MovementStats": {
+    "default": {
+      "Level": "default",
+      "SprintSpeedMultiplier": 1.5,
+      "StrafeSpeedMultiplier": 0.8,
+      "ADSStrafeSpeedMultiplier": 0.75,
+      "CrouchSpeedMultiplier": 0.5,
+      "MaxAcceleration": 4096,
+      "BrakingFrictionFactor": 1.5,
+      "GroundFriction": 8,
+      "GravityScale": 1.6,
+      "JumpZVelocity": 670,
+      "AirControl": 1
+    }
+  }
+}
