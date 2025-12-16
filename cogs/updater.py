@@ -8,7 +8,7 @@ from datetime import datetime
 from discord import app_commands
 from discord.ext import commands
 
-GITHUB_REPO = "https://github.com/unclemelo/Buggy"
+GITHUB_REPO = "https://github.com/unclemelo/Hexbyte"
 DEV_ROLE_ID = [954135885392252940]
 
 class Updater(commands.Cog):
