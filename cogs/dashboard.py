@@ -30,8 +30,20 @@ class Dashboard(commands.Cog):
         await interaction.response.defer()
         # Create a advanced embed for the dashboard with buttons
         embed = discord.Embed(
-            title="🛠️ WTF Dashboard"
-            , description="Use the buttons below to report bugs or get support.", color=discord.Color.orange())
+            title="🛠️ WTF Dashboard",
+            description="Use the buttons below to report bugs or get support.",
+            color=discord.Color.orange()
+        )
+        embed.set_thumbnail(url=self.bot.user.avatar.url)
+        # if user has a dev roles add extra more buttons and info
+        member = interaction.guild.get_member(interaction.user.id) if interaction.guild else None
+        if member and any(role.id in [954135885392252940] for role in member.roles):
+            embed.add_field(
+                name="Developer Options",
+                value="As a developer, you have access to additional options in the dashboard.",
+                inline=False
+            )
+        
         view = self.build_dashboard_view()
         await interaction.followup.send(embed=embed, view=view)
 
