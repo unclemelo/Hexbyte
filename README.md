@@ -1,4 +1,4 @@
-# 🐛 Buggy
+# 🐛 Hexbyte
 
 **Maintained by UncleMelo**
 Built for the **WTF community** to track stats and expose in-game data.
@@ -7,7 +7,7 @@ Built for the **WTF community** to track stats and expose in-game data.
 
 ## ✨ Overview
 
-**Buggy** is a Discord bot designed to surface game data for the WTF community. It provides clean, easy-to-use **slash commands** for viewing levels, weapons, and player-related stats, all powered by structured JSON data and optional external APIs.
+**Hexbyte** is a Discord bot designed to surface game data for the WTF community. It provides clean, easy-to-use **slash commands** for viewing levels, weapons, and player-related stats, all powered by structured JSON data and optional external APIs.
 
 The bot focuses on:
 
@@ -95,7 +95,7 @@ pip install -r requirements.txt
 python bot.py
 ```
 
-On startup, Buggy will:
+On startup, Hexbyte will:
 
 * Load all cogs from the `cogs/` directory
 * Sync slash commands automatically
@@ -104,7 +104,7 @@ On startup, Buggy will:
 
 ## 📦 Dependencies
 
-Buggy relies on the following Python packages:
+Hexbyte relies on the following Python packages:
 
 * **discord.py (v2.x)** — slash commands & UI components
 * **python-dotenv** — environment variable loading
