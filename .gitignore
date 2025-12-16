@@ -4,3 +4,6 @@ cogs/__pycache__
 __pycache__
 bot_errors.log
 animegirl.png
+data/deathlog.json
+data/lfg_sessions.json
+data/royal_stats.json
